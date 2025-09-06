@@ -34,6 +34,14 @@ const nextConfig: NextConfig = {
         hostname: 'i.imgur.com',
         port: '',
         pathname: '/**',
+        import { defineConfig } from 'next'
+
+export default defineConfig({
+  experimental: {
+    appDir: 'src/app', // informa ao Next que o app está dentro de src/app
+  },
+})
+
       }
     ],
   },
