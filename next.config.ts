@@ -1,8 +1,9 @@
+import { defineConfig } from 'next'
 
-import type {NextConfig} from 'next';
-
-const nextConfig: NextConfig = {
-  /* config options here */
+export default defineConfig({
+  experimental: {
+    appDir: 'src/app', // informa ao Next que o app está dentro de src/app
+  },
   typescript: {
     ignoreBuildErrors: true,
   },
@@ -34,17 +35,7 @@ const nextConfig: NextConfig = {
         hostname: 'i.imgur.com',
         port: '',
         pathname: '/**',
-        import { defineConfig } from 'next'
-
-export default defineConfig({
-  experimental: {
-    appDir: 'src/app', // informa ao Next que o app está dentro de src/app
-  },
-})
-
-      }
+      },
     ],
   },
-};
-
-export default nextConfig;
+})
